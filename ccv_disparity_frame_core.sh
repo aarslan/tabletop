@@ -20,6 +20,6 @@ module unload cuda
 src_code_dir='/users/aarslan/code/dorsoventral'
 joblist='/users/aarslan/joblists/'$1
 
-rm $joblist -f
-
 parallel -j4 -a $joblist
+
+rm $joblist -f
