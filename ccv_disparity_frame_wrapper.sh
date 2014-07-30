@@ -18,7 +18,7 @@ split biglist.txt part -d -l $JOB_COUNT
 
 
 
-for f in part*; do echo $f; done
+for f in part*;
 do 
 	sbatch ./ccv_disparity_frame_core.sh $TEMP_DIR/$f
 	sleep 0.5
