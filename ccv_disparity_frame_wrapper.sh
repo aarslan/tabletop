@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CODE_DIR=/home/aarslan/prj/code/dorsoventral/disparity
+CODE_DIR=/gpfs/home/aarslan/code/tabletop
 FRAMES_DIR=/gpfs/data/tserre/Users/aarslan/tabletop_mono/frames_full_def
 TARGET_DIR=/gpfs/data/tserre/Users/aarslan/tabletop_mono/features
 
@@ -13,7 +13,7 @@ data_out=$TARGET_DIR
 
 
 ##Here, we make the big joblist and split them into multiple parts
-find $FRAMES_DIR/*/l/ -name "*.png" | awk '{print "python process_directory_stereo.py --src_dir "$0 " --target_dir /gpfs/data/tserre/Users/aarslan/tabletop_mono/features"}' >> $TEMP_DIR/biglist.txt
+find $FRAMES_DIR/*/l/ -name "*.png" | awk '{print "python /gpfs/home/aarslan/code/tabletop/process_directory_stereo.py --src_dir "$0 " --target_dir /gpfs/data/tserre/Users/aarslan/tabletop_mono/features"}' >> $TEMP_DIR/biglist.txt
 split biglist.txt part -d -l $JOB_COUNT
 
 
