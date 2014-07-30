@@ -14,7 +14,7 @@ data_out=$TARGET_DIR
 
 ##Here, we make the big joblist and split them into multiple parts
 find $FRAMES_DIR/*/l/ -name "*.png" | awk '{print "python /gpfs/home/aarslan/code/tabletop/process_directory_stereo.py --src_dir "$0 " --target_dir /gpfs/data/tserre/Users/aarslan/tabletop_mono/features"}' >> $TEMP_DIR/biglist.txt
-split  $TEMP_DIR/biglist.txt  $TEMP_DIR/part -d -l $JOB_COUNT
+split  $TEMP_DIR/biglist.txt  $TEMP_DIR/part -d -l $JOB_COUNT -a 5
 
 
 
