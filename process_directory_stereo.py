@@ -59,7 +59,7 @@ def main():
 		this_fr = path_parts[-1]
 		vid_type = path_parts[-3]
 		src_dir = os.path.split(os.path.split(os.path.split(src_dir)[0])[0])[0]
-	import ipdb; ipdb.set_trace()
+	#import ipdb; ipdb.set_trace()
 	target_dir = args.target_dir
 	process_frame(src_dir, vid_type, this_fr, target_dir)
 
