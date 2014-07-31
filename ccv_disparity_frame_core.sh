@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --time=00:59:00
-#SBATCH --mem=64G
+#SBATCH --mem=126G
 ##SBATCH -n 8
 ##SBATCH -N 8-16 
 #SBATCH --qos=pri-aarslan ##bibs-tserre-condo
@@ -19,6 +19,6 @@ module unload cuda
 src_code_dir='/users/aarslan/code/dorsoventral'
 joblist=$1
 
-parallel -j4 -a $joblist
+parallel -j3 -a $joblist
 
 rm $joblist -f
