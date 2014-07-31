@@ -20,7 +20,7 @@ split  $TEMP_DIR/biglist.txt  $TEMP_DIR/part -d -l $JOB_COUNT -a 5
 
 for f in $TEMP_DIR/part*;
 do 
-	sbatch ./ccv_disparity_frame_core.sh $TEMP_DIR/$f
+	sbatch ./ccv_disparity_frame_core.sh $f
 	sleep 0.5
 done
 

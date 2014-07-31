@@ -17,7 +17,7 @@ module load enthought
 module unload cuda
 
 src_code_dir='/users/aarslan/code/dorsoventral'
-joblist='/users/aarslan/joblists/'$1
+joblist=$1
 
 parallel -j4 -a $joblist
 
