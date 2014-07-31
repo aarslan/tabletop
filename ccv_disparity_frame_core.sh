@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --time=00:59:00
+#SBATCH --time=23:59:00
 #SBATCH --mem=126G
 ##SBATCH -n 8
 ##SBATCH -N 8-16 
@@ -19,6 +19,6 @@ module unload cuda
 src_code_dir='/users/aarslan/code/dorsoventral'
 joblist=$1
 
-parallel -j3 -a $joblist
+parallel -j4 -a $joblist
 
 rm $joblist -f

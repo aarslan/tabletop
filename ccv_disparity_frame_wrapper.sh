@@ -6,7 +6,7 @@ TARGET_DIR=/gpfs/data/tserre/Users/aarslan/tabletop_mono/features
 
 TEMP_DIR=/gpfs/home/aarslan/joblists
 
-JOB_COUNT=100
+JOB_COUNT=50
 
 data_in=$ANGLES_DIR
 data_out=$TARGET_DIR
