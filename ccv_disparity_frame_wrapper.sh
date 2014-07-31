@@ -16,7 +16,7 @@ data_out=$TARGET_DIR
 find $FRAMES_DIR/*/l/ -name "*.png" | awk '{print "python /gpfs/home/aarslan/code/tabletop/process_directory_stereo.py --src_dir "$0 " --target_dir /gpfs/data/tserre/Users/aarslan/tabletop_mono/features"}' >> $TEMP_DIR/biglist.txt
 split  $TEMP_DIR/biglist.txt  $TEMP_DIR/part -d -l $JOB_COUNT -a 5
 
-
+sleep 10
 
 for f in $TEMP_DIR/part*;
 do 
